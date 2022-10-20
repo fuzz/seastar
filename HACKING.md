@@ -42,9 +42,17 @@ See the instructions in [README.md](./README.md).
 ./cooking.sh -e Boost -t Release
 ```
 
+#### Minimal configuration for Ubuntu 22.04 (LTS) x64
+
+Starting from fresh install (tested on Digital Ocean droplets)
+
+```
+apt install -y autogen cmake g++ guile-2.2 libidn-dev libnuma-dev libtool libunbound-dev m4 ninja-build pkg-config stow trousers xutils-dev
+```
+
 ## Using an IDE with CMake support
 
-If you use `configure.py` or `cooking.sh` to to configure Seastar, then the easiest way to use an IDE (such as Qt Creator, or CLion) for development is to instruct the IDE, when it invokes CMake, to include the following option:
+If you use `configure.py` or `cooking.sh` to configure Seastar, then the easiest way to use an IDE (such as Qt Creator, or CLion) for development is to instruct the IDE, when it invokes CMake, to include the following option:
 
 ```
 -DCMAKE_PREFIX_PATH=${source_dir}/build/_cooking/installed
